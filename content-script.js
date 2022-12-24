@@ -113,46 +113,52 @@ chrome.storage.local.get(['views', 'explore', 'bookmarks', 'lists', 'messages', 
 
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-        console.log(request);
         if (request.hideViews) {
             config.views = !config.views;
             chrome.storage.local.set({'views': config.views}, function() {});
+            callback(null);
             sendResponse({status: true});
         }
 
         if (request.hideExplore) {
             config.explore = !config.explore;
             chrome.storage.local.set({'explore': config.explore}, function() {});
+            callback(null);
             sendResponse({status: true});
         }
 
         if (request.hideBookmarks) {
             config.bookmarks = !config.bookmarks;
             chrome.storage.local.set({'bookmarks': config.bookmarks}, function() {});
+            callback(null);
             sendResponse({status: true});
         }
         
         if (request.hideLists) {
             config.lists = !config.lists;
             chrome.storage.local.set({'lists': config.lists}, function() {});
+            callback(null);
             sendResponse({status: true});
         }
 
         if (request.hideMessages) {
             config.messages = !config.messages;
             chrome.storage.local.set({'messages': config.messages}, function() {});
+            callback(null);
             sendResponse({status: true});
         }
         
         if (request.hideHappening) {
             config.happening = !config.happening;
             chrome.storage.local.set({'happening': config.happening}, function() {});
+            callback(null);
             sendResponse({status: true});
         }
 
         if (request.hideWhoToFollow) {
             config.whotofollow = !config.whotofollow;
             chrome.storage.local.set({'whotofollow': config.whotofollow}, function() {});
+            callback(null);
             sendResponse({status: true});
         }
 

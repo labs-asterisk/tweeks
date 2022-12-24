@@ -2,8 +2,8 @@
     "name": "Tweeks",
     "version": "1.0.0",
     "description": "Simple & easy tweaks for your tweets.",
-    "manifest_version": 2,
-    "browser_action":{
+    "manifest_version": 3,
+    "action":{
       "default_popup": "popup.html",
       "default_title": "Tweeks"
     },
@@ -14,12 +14,14 @@
       }
     ], 
     "background": {
-        "scripts": ["./background.js"]
+        "service_worker": "./background.js"
     },
     "permissions": [
         "storage",
-        "tabs",
-        "https://www.twitter.com/*",
+        "tabs"
+    ],
+    "host_permissions": [
+      "https://www.twitter.com/*",
         "https://twitter.com/*"
     ],
     "icons": {
