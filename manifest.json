@@ -9,7 +9,7 @@
     },
     "content_scripts": [
       {
-        "matches": ["https://www.twitter.com/*"],
+        "matches": ["https://www.twitter.com/*", "https://twitter.com/*"],
         "js": ["content-script.js"]
       }
     ], 
