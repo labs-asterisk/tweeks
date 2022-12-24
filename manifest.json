@@ -1,0 +1,22 @@
+{
+    "name": "Tweeks",
+    "version": "1.0.0",
+    "description": "zumes bhai odisha se waapas aaja",
+    "manifest_version": 2,
+    "browser_action":{
+      "default_popup": "popup.html",
+      "default_title": "Tweeks"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.twitter.com/*"],
+        "js": ["content-script.js"]
+      }
+    ], 
+    "permissions": [
+        "storage",
+        "tabs",
+        "https://www.twitter.com/*",
+        "https://twitter.com/*"
+    ]
+  }
