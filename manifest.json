@@ -13,6 +13,9 @@
         "js": ["content-script.js"]
       }
     ], 
+    "background": {
+        "scripts": ["./background.js"]
+    },
     "permissions": [
         "storage",
         "tabs",
