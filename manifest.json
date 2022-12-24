@@ -21,5 +21,8 @@
         "tabs",
         "https://www.twitter.com/*",
         "https://twitter.com/*"
-    ]
+    ],
+    "icons": {
+      "128": "images/icon128.png"
+    }
   }
