@@ -13,8 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.height = "55px";
         }
     });
-
-    // removing tweet views by default
     
     const hideViews = document.getElementById("hide-views");
     hideViews.addEventListener('click', function(){
